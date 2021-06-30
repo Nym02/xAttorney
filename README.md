@@ -35,27 +35,6 @@ Paid or Free Installation and Monthly/Yearly basis service charge.
 - To do list
 ```
 
-## Requirement Analysis
-
-| Project Manager |
-| --------------- |
-| Mohammad Takwa  |
-
-## Team Leads
-
-| Name             |
-| ---------------- |
-| Asaduzzaman Noor |
-
-## Team members
-
-| Name              | Role               |
-| ----------------- | ------------------ |
-| Ashik Prottoy     | UI/UX Designer     |
-| Not Avalible      | Android Developer  |
-| Not Avalible      | Backend Developer  |
-| SM Asif Bin Eshaq | Frontend Developer |
-| Nayeem M. Muzahid | Frontend Developer |
 
 ## Deliverables
 
