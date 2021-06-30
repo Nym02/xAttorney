@@ -1,0 +1,6108 @@
+Division:
+mutation {
+  createDivision(
+    division: {
+      name: "Sylhet",
+      country: "Bangladesh",
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data
+    {
+      id
+      name
+      country
+    }
+  }
+}
+
+mutation {
+  updateDivision(
+    division: {
+      id: "6096da5a22ef6b5134ddae6f"
+      name: "Chittagong",
+      country: "Bangladesh",
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data
+    {
+      id
+      name
+      country
+    }
+  }
+}
+
+mutation {
+  deleteDivision(
+    divisionId: "6096da8222ef6b5134ddae74"
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+  }
+}
+
+{
+  getDivisionList(size: 10, offset: 0) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      divisionList {
+        id
+        name
+        country
+      }
+      offset
+      limit
+      numberOfElements
+      totalElements
+      totalPages
+      first
+      last
+    }
+  }
+}
+
+{
+  getDivisionById(
+    divisionId: "6096d9dd22ef6b5134ddae6d"
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data
+    {
+      id
+      name
+      country
+    }
+  }
+}
+
+{
+  getDivisionByDivisionName(
+    divisionName: "Barishal"
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data
+    {
+      id
+      name
+      country
+    }
+  }
+}
+
+{
+  getDivisionListByCountryName(countryName: "Bangladesh", size: 10, offset: 0) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      divisionList {
+        id
+        name
+        country
+      }
+      offset
+      limit
+      numberOfElements
+      totalElements
+      totalPages
+      first
+      last
+    }
+  }
+}
+
+
+District:
+mutation {
+  createDistrict(
+    district: {
+      name: "Barguna",
+      division: {
+        id: "6096d9dd22ef6b5134ddae6d"
+      }
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data
+    {
+      id
+      name
+      division {
+        id
+        name
+        country
+      }
+    }
+  }
+}
+
+mutation {
+  updateDistrict(
+    district: {
+      id: "6096e6b622ef6b6f11e9c0e5"
+      name: "Test",
+      division: {
+        id: "6096d9dd22ef6b5134ddae6d"
+      }
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data
+    {
+      id
+      name
+      division {
+        id
+        name
+        country
+      }
+    }
+  }
+}
+
+mutation {
+  deleteDistrict(
+    districtId: "6096e6b622ef6b6f11e9c0e5"
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+  }
+}
+
+{
+  getDistrictList(size: 10, offset: 0) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      districtList {
+        id
+        name
+        division {
+          id
+          name
+          country
+        }
+      }
+      offset
+      limit
+      numberOfElements
+      totalElements
+      totalPages
+      first
+      last
+    }
+  }
+}
+
+{
+  getDistrictById(
+    districtId: "6096e82a22ef6b6f11e9c0e6"
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data
+    {
+      id
+      name
+      division {
+        id
+        name
+        country
+      }
+    }
+  }
+}
+
+{
+  getDistrictByDistrictName(
+    districtName: "Barguna"
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data
+    {
+      id
+      name
+      division {
+        id
+        name
+        country
+      }
+    }
+  }
+}
+
+{
+  getDistrictListByDivisionName(
+    divisionName: "Barishal"
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      districtList {
+        id
+        name
+        division {
+          id
+          name
+          country
+        }
+      }
+      offset
+      limit
+      numberOfElements
+      totalElements
+      totalPages
+      first
+      last
+    }
+  }
+}
+
+{
+  getDistrictListByDivisionId(
+    divisionId: "6096d9dd22ef6b5134ddae6d",
+    size: 10
+    offset: 0
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      districtList {
+        id
+        name
+        division {
+          id
+          name
+          country
+        }
+      }
+      offset
+      limit
+      numberOfElements
+      totalElements
+      totalPages
+      first
+      last
+    }
+  }
+}
+
+Sub District:
+mutation {
+  createSubDistrict(
+    subDistrict: {
+      name: "Barguna Sadar",
+      district:{
+        id: "6096d9dd22ef6b5134ddae6d"
+      }
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data
+    {
+      id
+      name
+      district {
+        id
+        name
+        division {
+          id
+          name
+          country
+        }
+      }
+    }
+  }
+}
+
+{
+  getSubDistrictBySubDistrictName(
+    subDistrictName: "Barguna Sadar"
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data
+    {
+      id
+      name
+      district {
+        id
+        name
+        division {
+          id
+          name
+          country
+        }
+      }
+    }
+  }
+}
+
+mutation {
+  updateSubDistrict(
+    subDistrict: {
+      id: "6096f47f22ef6b7a821c1d49"
+      name: "Barguna Sadar",
+      district: {
+        id: "6096e82a22ef6b6f11e9c0e6"
+      }
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data
+    {
+      id
+      name
+      district {
+        id
+        name
+        division {
+          id
+          name
+          country
+        }
+      }
+    }
+  }
+}
+
+mutation {
+  deleteSubDistrict(
+    subDistrictId: "6096f2cf22ef6b7a821c1d48"
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+  }
+}
+
+{
+  getSubDistrictList(size: 10, offset: 0) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      subDistrictList {
+        id
+        name
+        district {
+          id
+          name
+          division {
+            id
+            name
+            country
+          }
+        }
+      }
+      offset
+      limit
+      numberOfElements
+      totalElements
+      totalPages
+      first
+      last
+    }
+  }
+}
+
+{
+  getSubDistrictListByDistrictId(districtId: "60a79204ea41b9184122646b", size: 10, offset: 0) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      subDistrictList {
+        id
+        name
+        district {
+          id
+          name
+          division {
+            id
+            name
+            country
+          }
+        }
+      }
+      offset
+      limit
+      numberOfElements
+      totalElements
+      totalPages
+      first
+      last
+    }
+  }
+}
+
+Post Office:
+mutation {
+  createPostOffice(
+    postOffice: {
+      name: "Barguna Sadar Post Office",
+      postCode: "8700"
+      subDistrict: {
+        id: "6096f47f22ef6b7a821c1d49"
+      }
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data
+    {
+      id
+      name
+      postCode
+      subDistrict {
+        id
+        name
+        district {
+          id
+          name
+          division {
+            id
+            name
+            country
+          }
+        }
+      }
+    }
+  }
+}
+
+mutation {
+  updatePostOffice(
+    postOffice: {
+      id: "6096ffc122ef6b8c89ee37de"
+      name: "Barguna Sadar Post Office",
+      postCode: "8701"
+      subDistrict: {
+        id: "6096f47f22ef6b7a821c1d49"
+      }
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data
+    {
+      id
+      name
+      postCode
+      subDistrict {
+        id
+        name
+        district {
+          id
+          name
+          division {
+            id
+            name
+            country
+          }
+        }
+      }
+    }
+  }
+}
+
+mutation {
+  deletePostOffice(
+    postOfficeId: "6096ffc122ef6b8c89ee37de"
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+  }
+}
+
+{
+  getPostOfficeList(size: 10, offset: 0) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      postOfficeList {
+        id
+        name
+        postCode
+        subDistrict {
+          id
+          name
+          district {
+            id
+            name
+            division {
+              id
+              name
+              country
+            }
+          }
+        }
+      }
+      offset
+      limit
+      numberOfElements
+      totalElements
+      totalPages
+      first
+      last
+    }
+  }
+}
+
+{
+  getPostOfficeById(
+    postOfficeId: "6097007722ef6b8c89ee37df"
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data
+    {
+      id
+        name
+        postCode
+        subDistrict {
+          id
+          name
+          district {
+            id
+            name
+            division {
+              id
+              name
+              country
+            }
+          }
+        }
+    }
+  }
+}
+
+{
+  getPostOfficeByPostOfficeName(
+    postOfficeName: "Barguna Sadar Post Office"
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data
+    {
+      id
+        name
+        postCode
+        subDistrict {
+          id
+          name
+          district {
+            id
+            name
+            division {
+              id
+              name
+              country
+            }
+          }
+        }
+    }
+  }
+}
+
+{
+  getPostOfficeByPostCode(
+    postCode: "8700"
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data
+    {
+      id
+        name
+        postCode
+        subDistrict {
+          id
+          name
+          district {
+            id
+            name
+            division {
+              id
+              name
+              country
+            }
+          }
+        }
+    }
+  }
+}
+
+{
+  getPostOfficeListBySubDistrictId(subDistrictId: "60a792a2ea41b9184122646e", size: 10, offset: 0) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      postOfficeList {
+        id
+        name
+        postCode
+        subDistrict {
+          id
+          name
+          district {
+            id
+            name
+            division {
+              id
+              name
+              country
+            }
+          }
+        }
+      }
+      offset
+      limit
+      numberOfElements
+      totalElements
+      totalPages
+      first
+      last
+    }
+  }
+}
+
+Police Station:
+mutation {
+  deletePoliceStation(
+    policeStationId: "60971bd922ef6ba67452a597"
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+  }
+}
+
+{
+  getPoliceStationById(
+    policeStationId: "60971d5222ef6ba67452a598"
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data
+    {
+      id
+      name
+      district {
+        id
+        name
+        division {
+          id
+          name
+          country
+        }
+      }
+    }
+  }
+}
+
+{
+  getPoliceStationByPoliceStationName(
+    policeStationName: "Barguna Police Super Office"
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data
+    {
+      id
+      name
+      district {
+        id
+        name
+        division {
+          id
+          name
+          country
+        }
+      }
+    }
+  }
+}
+
+{
+  getPoliceStationList(size: 10, offset: 0) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      policeStationList {
+        id
+        name
+        district {
+          id
+          name
+          division {
+            id
+            name
+            country
+          }
+        }
+      }
+      offset
+      limit
+      numberOfElements
+      totalElements
+      totalPages
+      first
+      last
+    }
+  }
+}
+
+{
+  getPoliceStationListByDistrictId(districtId: "60a79204ea41b9184122646b", size: 10, offset: 0) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      policeStationList {
+        id
+        name
+        district {
+          id
+          name
+          division {
+            id
+            name
+            country
+          }
+        }
+      }
+      offset
+      limit
+      numberOfElements
+      totalElements
+      totalPages
+      first
+      last
+    }
+  }
+}
+
+mutation {
+  createPoliceStation(
+    policeStation: {
+      name: "Barguna Police Super Office",
+      district: {
+        id: "6096e82a22ef6b6f11e9c0e6"
+      }
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data
+    {
+      id
+      name
+      district {
+        id
+        name
+        division {
+          id
+          name
+          country
+        }
+      }
+    }
+  }
+}
+
+mutation {
+  updatePoliceStation(
+    policeStation: {
+      id: "60971bd922ef6ba67452a597"
+      name: "Barguna Police Super Officefdf",
+      district: {
+        id: "6096e82a22ef6b6f11e9c0e6"
+      }
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data
+    {
+      id
+      name
+      district {
+        id
+        name
+        division {
+          id
+          name
+          country
+        }
+      }
+    }
+  }
+}
+
+Bar Council:
+mutation {
+  createBarCouncil(
+    barCouncil: {
+      name: "Test Bar Council",
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data
+    {
+      id
+      name
+    }
+  }
+}
+
+mutation {
+  updateBarCouncil(
+    barCouncil: {
+      id: "6097b98022ef6b8bb91b3a69"
+      name: "Testtest Bar Council",
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data
+    {
+      id
+      name
+    }
+  }
+}
+
+mutation {
+  deleteBarCouncil(
+    barCouncilId: "6097b98022ef6b8bb91b3a69"
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+  }
+}
+
+{
+  getBarCouncilList(size: 10, offset: 0) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      barCouncilList {
+        id
+        name
+      }
+      offset
+      limit
+      numberOfElements
+      totalElements
+      totalPages
+      first
+      last
+    }
+  }
+}
+
+{
+  getBarCouncilById(
+    barCouncilId: "6097ba0622ef6b8bb91b3a6a"
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data
+    {
+      id
+      name
+    }
+  }
+}
+
+{
+  getBarCouncilByBarCouncilName(
+    barCouncilName: "Test Bar Council"
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data
+    {
+      id
+      name
+    }
+  }
+}
+
+Service Area:
+mutation {
+  createServiceArea(
+    serviceArea: {
+      name: "Test Service Area",
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data
+    {
+      id
+      name
+    }
+  }
+}
+
+mutation {
+  updateServiceArea(
+    serviceArea: {
+      id: "6097cc4922ef6ba0d69c40d3"
+      name: "Testtest Service Area",
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data
+    {
+      id
+      name
+    }
+  }
+}
+
+mutation {
+  deleteServiceArea(
+    serviceAreaId: "6097cc4922ef6ba0d69c40d3"
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+  }
+}
+
+{
+  getServiceAreaById(
+    serviceAreaId: "6097cc4922ef6ba0d69c40d3"
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data
+    {
+      id
+      name
+    }
+  }
+}
+
+{
+  getServiceAreaByServiceAreaName(
+    serviceAreaName: "Test Service Area"
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data
+    {
+      id
+      name
+    }
+  }
+}
+
+{
+  getServiceAreaList(size: 10, offset: 0) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      serviceAreaList {
+        id
+        name
+      }
+      offset
+      limit
+      numberOfElements
+      totalElements
+      totalPages
+      first
+      last
+    }
+  }
+}
+
+Specialities:
+mutation {
+  createSpecialities(
+    specialities: {
+      name: "Test Specialities",
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data
+    {
+      id
+      name
+    }
+  }
+}
+
+mutation {
+  updateSpecialities(
+    specialities: {
+      id: "609a4c7722ef6b5eac61aa62"
+      name: "Testtest specialities",
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+    }
+  }
+}
+
+mutation {
+  deleteSpecialities(
+    specialitiesId: "609a4c7722ef6b5eac61aa62"
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+  }
+}
+
+{
+  getSpecialitiesList(size: 10, offset: 0) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      specialitiesList {
+        id
+        name
+      }
+      offset
+      limit
+      numberOfElements
+      totalElements
+      totalPages
+      first
+      last
+    }
+  }
+}
+
+{
+  getSpecialitiesById(
+    specialitiesId: "609a4c7722ef6b5eac61aa62"
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+    }
+  }
+}
+
+{
+  getSpecialitiesBySpecialitiesName(
+    specialitiesName: "Test Specialities"
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+    }
+  }
+}
+
+Affiliations:
+mutation {
+  createAffiliations(
+    affiliations: {
+      name: "Test Affiliations",
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+    }
+  }
+}
+
+mutation {
+  updateAffiliations(
+    affiliations: {
+      id: "609a54e322ef6b8d0943f935"
+      name: "Testtest Affiliations",
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+    }
+  }
+}
+
+mutation {
+  deleteAffiliations(
+    affiliationsId: "609a54e322ef6b8d0943f935"
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+  }
+}
+
+{
+  getAffiliationsList(size: 10, offset: 0) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      affiliationsList {
+        id
+        name
+      }
+      offset
+      limit
+      numberOfElements
+      totalElements
+      totalPages
+      first
+      last
+    }
+  }
+}
+
+{
+  getAffiliationsById(
+    affiliationsId: "609a556822ef6b8d0943f936"
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+    }
+  }
+}
+
+{
+  getAffiliationsByAffiliationsName(
+    affiliationsName: "Test Affiliations"
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+    }
+  }
+}
+
+Pricing Plan:
+mutation {
+  createPricingPlan(
+    pricingPlan: {
+      name: "Test Pricing Plan",
+      planMode: MONTHLY,
+      featureList: ["feature1", "feature2"],
+      benefitList: ["benefits1", "benefits2"],
+      price: 20.00,
+      discountedAmount: 5.00
+      inactive: false
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      planMode
+      featureList
+      benefitList
+      price
+      discountedAmount
+      inactive
+    }
+  }
+}
+
+mutation {
+  updatePricingPlan(
+    pricingPlan: {
+      id: "609a65b322ef6bb1130a4cc1"
+      name: "Test Pricing Plan",
+      planMode: YEARLY,
+      featureList: ["feature1", "feature2"],
+      benefitList: ["benefits1", "benefits2"],
+      price: 20.00,
+      discountedAmount: 5.00
+      inactive: false
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      planMode
+      featureList
+      benefitList
+      price
+      discountedAmount
+      inactive
+    }
+  }
+}
+
+mutation {
+  deletePricingPlan(
+    pricingPlanId: "609a65b322ef6bb1130a4cc1"
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+  }
+}
+
+{
+  getPricingPlanList(size: 10, offset: 0) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      pricingPlanList {
+        id
+        name
+        planMode
+        featureList
+        benefitList
+        price
+        discountedAmount
+        inactive
+      }
+      offset
+      limit
+      numberOfElements
+      totalElements
+      totalPages
+      first
+      last
+    }
+  }
+}
+
+{
+  getPricingPlanById(pricingPlanId: "609ac94f22ef6b43589d5434") {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      planMode
+      featureList
+      benefitList
+      price
+      discountedAmount
+      inactive
+    }
+  }
+}
+
+{
+  getPricingPlanByPricingPlanName(pricingPlanName: "Test Pricing Plan") {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      planMode
+      featureList
+      benefitList
+      price
+      discountedAmount
+      inactive
+    }
+  }
+}
+
+Court:
+mutation {
+  createCourt(
+    court: {
+      name: "Test Court",
+      country: "Bangladesh",
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      country
+    }
+  }
+}
+
+mutation {
+  updateCourt(
+    court: {
+      id: "609adb6a22ef6b678d4af564",
+      name: "TestTest Court",
+      country: "Bangladesh",
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      country
+    }
+  }
+}
+
+mutation {
+  deleteCourt(
+    courtId: "609adb6a22ef6b678d4af564"
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+  }
+}
+
+{
+  getCourtList(size: 10, offset: 0) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      courtList {
+        id
+        name
+        country
+      }
+      offset
+      limit
+      numberOfElements
+      totalElements
+      totalPages
+      first
+      last
+    }
+  }
+}
+
+{
+  getCourtById(courtId: "609adbd222ef6b678d4af565") {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      country
+    }
+  }
+}
+
+{
+  getCourtListByCourtName(courtName: "Test Court", size: 10, offset: 0) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      courtList {
+        id
+        name
+        country
+      }
+      offset
+      limit
+      numberOfElements
+      totalElements
+      totalPages
+      first
+      last
+    }
+  }
+}
+
+{
+  getCourtListByCountryName(countryName: "Bangladesh", size: 10, offset: 0) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      courtList {
+        id
+        name
+        country
+      }
+      offset
+      limit
+      numberOfElements
+      totalElements
+      totalPages
+      first
+      last
+    }
+  }
+}
+
+Court Name:
+mutation {
+  createCourtName(
+    courtName: {
+      name: "Test Court Name",
+      court: {
+        id: "609adbd222ef6b678d4af565"
+      }
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      court {
+        id
+      }
+    }
+  }
+}
+
+mutation {
+  updateCourtName(
+    courtName: {
+      id: "609aeebd22ef6b803ef05583",
+      name: "Test Test Court Name",
+      court: {
+        id: "609adbd222ef6b678d4af565"
+      }
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      court {
+        id
+      }
+    }
+  }
+}
+
+mutation {
+  deleteCourtName(
+    courtNameId: "609aeebd22ef6b803ef05583"
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+  }
+}
+
+{
+  getCourtNameList(size: 10, offset: 0) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      courtNameList {
+        id
+        name
+        court {
+          id
+          name
+          country
+        }
+      }
+      offset
+      limit
+      numberOfElements
+      totalElements
+      totalPages
+      first
+      last
+    }
+  }
+}
+
+{
+  getCourtNameById(courtNameId: "609aef1422ef6b803ef05584") {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      court {
+        id
+        name
+        country
+      }
+    }
+  }
+}
+
+{
+  getCourtNameByName(name: "Test Court Name") {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      court {
+        id
+        name
+        country
+      }
+    }
+  }
+}
+
+Primary Result:
+mutation {
+  createPrimaryResult(
+    primaryResult: {
+      name: "Test Primary Result",
+      court: {
+        id: "609adbd222ef6b678d4af565"
+      }
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      court {
+        id
+      }
+    }
+  }
+}
+
+mutation {
+  updatePrimaryResult(
+    primaryResult: {
+      id: "609ae04322ef6b678d4af566"
+      name: "TestTest Primary Result",
+      court: {
+        id: "609adbd222ef6b678d4af565"
+      }
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      court {
+        id
+      }
+    }
+  }
+}
+
+mutation {
+  deletePrimaryResult(
+    primaryResultId: "609ae04322ef6b678d4af566"
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+  }
+}
+
+{
+  getPrimaryResultList(size: 10, offset: 0) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      primaryResultList {
+        id
+        name
+        court {
+          id
+          name
+          country
+        }
+      }
+      offset
+      limit
+      numberOfElements
+      totalElements
+      totalPages
+      first
+      last
+    }
+  }
+}
+
+{
+  getPrimaryResultById(primaryResultId: "609ae0a822ef6b678d4af567") {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      court {
+        id
+        name
+        country
+      }
+    }
+  }
+}
+
+{
+  getPrimaryResultByPrimaryResultName(primaryResultName: "Test Primary Result") {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      court {
+        id
+        name
+        country
+      }
+    }
+  }
+}
+
+Judgment Result:
+mutation {
+  createJudgmentResult(
+    judgmentResult: {
+      name: "Test Judgment Result",
+      court: {
+        id: "609adbd222ef6b678d4af565"
+      }
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      court {
+        id
+      }
+    }
+  }
+}
+
+mutation {
+  updateJudgmentResult(
+    judgmentResult: {
+      id: "609ae8e622ef6b77831ae22b"
+      name: "Test Judgment Result",
+      court: {
+        id: "609adbd222ef6b678d4af565"
+      }
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      court {
+        id
+      }
+    }
+  }
+}
+
+mutation {
+  deleteJudgmentResult(
+    judgmentResultId: "609ae82b22ef6b77831ae22a"
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+  }
+}
+
+{
+  getJudgmentResultList(size: 10, offset: 0) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      judgmentResultList {
+        id
+        name
+        court {
+          id
+          name
+          country
+        }
+      }
+      offset
+      limit
+      numberOfElements
+      totalElements
+      totalPages
+      first
+      last
+    }
+  }
+}
+
+{
+  getJudgmentResultById(judgmentResultId: "609ae8e622ef6b77831ae22b") {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      court {
+        id
+        name
+        country
+      }
+    }
+  }
+}
+
+{
+  getJudgmentResultByJudgmentResultName(judgmentResultName: "Test Judgment Result") {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      court {
+        id
+        name
+        country
+      }
+    }
+  }
+}
+
+Case Log:
+{
+  getCaseLogList(size: 10, offset: 0) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      caseLogList {
+        id
+        name
+        username
+        details
+        time
+      }
+      offset
+      limit
+      numberOfElements
+      totalElements
+      totalPages
+      first
+      last
+    }
+  }
+}
+
+{
+  getCaseLogByUsername(username: "shihabhossain611@gmail.com", size: 10, offset: 0) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      caseLogList {
+        id
+        name
+        username
+        details
+        time
+      }
+      offset
+      limit
+      numberOfElements
+      totalElements
+      totalPages
+      first
+      last
+    }
+  }
+}
+
+{
+  getCaseLogById(caseLogId: "60a219f722ef6b4e367d1378") {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      username
+      details
+      time
+    }
+  }
+}
+
+Case Category:
+mutation {
+  createCaseCategory(
+    caseCategory: {
+      name: "Test Case Category",
+      court: {
+        id: "609adbd222ef6b678d4af565"
+      }
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      court {
+        id
+      }
+    }
+  }
+}
+
+mutation {
+  updateCaseCategory(
+    caseCategory: {
+      id: "60a218a822ef6b4e367d1377",
+      name: "Test Test Case Category",
+      court: {
+        id: "609adbd222ef6b678d4af565"
+      }
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      court {
+        id
+      }
+    }
+  }
+}
+
+mutation {
+  deleteCaseCategory(
+    caseCategoryId: "60a218a822ef6b4e367d1377"
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+  }
+}
+
+{
+  getCaseCategoryList(size: 10, offset: 0) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      caseCategoryList {
+        id
+        name
+        court {
+          id
+          name
+          country
+        }
+      }
+      offset
+      limit
+      numberOfElements
+      totalElements
+      totalPages
+      first
+      last
+    }
+  }
+}
+
+{
+  getCaseCategoryById(caseCategoryId: "60a219f722ef6b4e367d1378") {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      court {
+        id
+        name
+        country
+      }
+    }
+  }
+}
+
+{
+  getCaseCategoryByCaseCategoryName(caseCategoryName: "Test Case Category") {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      court {
+        id
+        name
+        country
+      }
+    }
+  }
+}
+
+Case Type:
+mutation {
+  createCaseType(
+    caseType: {
+      name: "Test Case Type",
+      court: {
+        id: "609adbd222ef6b678d4af565"
+      }
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      court {
+        id
+      }
+    }
+  }
+}
+
+mutation {
+  updateCaseType(
+    caseType: {
+      id: "60a2534a22ef6bb0b26eb46d",
+      name: "Test Test Case Type",
+      court: {
+        id: "609adbd222ef6b678d4af565"
+      }
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      court {
+        id
+      }
+    }
+  }
+}
+
+mutation {
+  deleteCaseType(
+    caseTypeId: "60a2534a22ef6bb0b26eb46d"
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+  }
+}
+
+{
+  getCaseTypeList(size: 10, offset: 0) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      caseTypeList {
+        id
+        name
+        court {
+          id
+          name
+          country
+        }
+      }
+      offset
+      limit
+      numberOfElements
+      totalElements
+      totalPages
+      first
+      last
+    }
+  }
+}
+
+{
+  getCaseTypeById(caseTypeId: "60a253a522ef6bb0b26eb46e") {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      court {
+        id
+        name
+        country
+      }
+    }
+  }
+}
+
+{
+  getCaseTypeByCaseTypeName(caseTypeName: "Test Case Type") {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      court {
+        id
+        name
+        country
+      }
+    }
+  }
+}
+
+Client Behalf:
+mutation {
+  createClientBehalf(
+    clientBehalf: {
+      name: "Test Client Behalf",
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+    }
+  }
+}
+
+mutation {
+  updateClientBehalf(
+    clientBehalf: {
+      id: "60a25b5f22ef6bbb0d6afe1d",
+      name: "Test Test Client Behalf",
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+    }
+  }
+}
+
+mutation {
+  deleteClientBehalf(
+    clientBehalfId: "60a25bfa22ef6bbb0d6afe1e"
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+  }
+}
+
+{
+  getClientBehalfList(size: 10, offset: 0) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      clientBehalfList {
+        id
+        name
+      }
+      offset
+      limit
+      numberOfElements
+      totalElements
+      totalPages
+      first
+      last
+    }
+  }
+}
+
+{
+  getClientBehalfById(clientBehalfId: "60a25bfa22ef6bbb0d6afe1e") {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+    }
+  }
+}
+
+{
+  getClientBehalfByClientBehalfName(clientBehalfName: "Test Client Behalf") {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+    }
+  }
+}
+
+Contact:
+mutation {
+  createContact(
+    contact: {
+      advocate: {
+        id: "60a4f9c122ef6b91b56c9f67"
+      }
+      name: "Test Contact",
+      phoneList: ["01997157535"],
+      emailList: ["shihabhossain611@gmail.com"],
+      designation: "Programmer",
+      company: "Project X Ltd."
+      details: "This is a test details"
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      advocate {
+        id
+      }
+      name
+      phoneList
+      emailList
+      designation
+      company
+      details
+    }
+  }
+}
+
+mutation {
+  updateContact(
+    contact: {
+      id: "60a555eb22ef6b4f306e4275",
+      advocate: {
+        id: "60a4f9c122ef6b91b56c9f67"
+      },
+      name: "Test Contact",
+      phoneList: ["01997157535"],
+      emailList: ["shihabhossain611@gmail.com"],
+      designation: "Software Engineer",
+      company: "Project X Ltd.",
+      details: "This is a test details"
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      advocate {
+        id
+      }
+      name
+      phoneList
+      emailList
+      designation
+      company
+      details
+    }
+  }
+}
+
+mutation {
+  deleteContact(
+    contactId: "60a555eb22ef6b4f306e4275"
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+  }
+}
+
+{
+  getContactList(size: 10, offset: 0) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      contactList {
+        id
+        advocate {
+          id
+          name
+          phone
+          email
+        }
+        name
+        phoneList
+        emailList
+        designation
+        company
+        details
+      }
+      offset
+      limit
+      numberOfElements
+      totalElements
+      totalPages
+      first
+      last
+    }
+  }
+}
+
+{
+  getContactById(contactId: "60a556a422ef6b4f306e4279") {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      advocate {
+        id
+        name
+        phone
+        email
+      }
+      name
+      phoneList
+      emailList
+      designation
+      company
+      details
+    }
+  }
+}
+
+Request For Contact:
+mutation {
+  createRequestForContact(
+    requestForContact: {
+      name: "Test Request Contact",
+      phone: "01997157535",
+      email: "shihabhossain611@gmail.com",
+      subject: "Test Subject",
+      message: "Test message"
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      email
+      phone
+      subject
+      message
+      callStatus
+    }
+  }
+}
+
+mutation {
+  updateRequestForContact(
+    requestForContact: {
+      id: "60a63a3e22ef6b9e50b73076"
+      name: "Test Request Contact",
+      email: "shihabhossain611@gmail.com",
+      phone: "01997157535",
+      subject: "This is a Test Subject",
+      message: "This is a Test message",
+      note: "This is a test note",
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      email
+      phone
+      subject
+      message
+      contactTime
+      ipAddress
+      callStatus
+      note
+      callStatusChangeTime
+    }
+  }
+}
+
+mutation {
+  deleteRequestForContact(
+    requestForContactId: "60a63a3e22ef6b9e50b73076"
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+  }
+}
+
+{
+  getRequestForContactList(size: 10, offset: 0) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      requestForContactList {
+        id
+        name
+        email
+        phone
+        subject
+        message
+        contactTime
+        ipAddress
+        callStatus
+        note
+        callStatusChangeTime
+      }
+      offset
+      limit
+      numberOfElements
+      totalElements
+      totalPages
+      first
+      last
+    }
+  }
+}
+
+{
+  getRequestForContactById(requestForContactId: "60a63b9122ef6ba3f148ea73") {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      email
+      phone
+      subject
+      message
+      contactTime
+      ipAddress
+      callStatus
+      note
+      callStatusChangeTime
+    }
+  }
+}
+
+mutation {
+  updateRequestForContactCallStatus(
+    requestForContact: {
+      id: "60acd28022ef6b967673ba5d"
+      callStatus: CALLED
+      note: "This is a test note"
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      email
+      phone
+      subject
+      message
+      contactTime
+      ipAddress
+      callStatus
+      note
+      callStatusChangeTime
+    }
+  }
+}
+
+To Do:
+mutation {
+  createToDo(
+    toDo: {
+      advocate: {
+        id: "60a4f9c122ef6b91b56c9f67"
+      }
+      description: "This is a test todo",
+      phone: "01997157535",
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      advocate {
+        id
+      }
+      description
+      phone
+      createdTime
+      completed
+      completedTime
+    }
+  }
+}
+
+mutation {
+  updateToDo(
+    toDo: {
+      id: "60a650f122ef6bc0c46c7e41"
+      advocate: {
+        id: "60a4f9c122ef6b91b56c9f67"
+      }
+      description: "This is a test test todo",
+      phone: "01997157535",
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      advocate {
+        id
+      }
+      description
+      phone
+      createdTime
+      completed
+      completedTime
+    }
+  }
+}
+
+mutation {
+  updateToDoCompletedStatus(
+    toDo: {
+      id: "60a6553022ef6bcd97f6b467"
+      completed: true
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      advocate {
+        id
+      }
+      description
+      phone
+      createdTime
+      completed
+      completedTime
+    }
+  }
+}
+
+mutation {
+  deleteToDo(
+    toDoId: "60a652f022ef6bc6ed462052"
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+  }
+}
+
+{
+  getToDoList(size: 10, offset: 0) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      toDoList {
+        id
+        advocate {
+          id
+          name
+          phone
+          email
+          designation
+          chamberName
+        }
+        description
+        phone
+        createdTime
+        completed
+        completedTime
+      }
+      offset
+      limit
+      numberOfElements
+      totalElements
+      totalPages
+      first
+      last
+    }
+  }
+}
+
+{
+  getToDoById(toDoId: "60a6553022ef6bcd97f6b467") {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      advocate {
+        id
+        name
+        phone
+        email
+        designation
+        chamberName
+      }
+      description
+      phone
+      createdTime
+      completed
+      completedTime
+    }
+  }
+}
+
+Staff:
+mutation {
+  createStaff(
+    staff: {
+      name: "Test Staff",
+      designation: "Test Designation",
+      phoneList: ["01849764118"],
+      emailList: ["test@gmail.com"],
+      bloodGroup: A_POSITIVE,
+      education: "Test Education",
+      address: {
+        streetAddress: "Test Street Adress",
+        postOffice: {
+          id: "6097007722ef6b8c89ee37df"
+        }
+        subDistrict: {
+          id: "6096f47f22ef6b7a821c1d49"
+        }
+        district: {
+          id: "6096e82a22ef6b6f11e9c0e6"
+        }
+        country: "Bangladesh"
+      },
+      description: "This is a test staff",
+      emergencyContactPerson: {
+        name: "Test",
+        phoneList: ["01997157536"],
+        emailList: ["test1@gmail.com"],
+        relation: "Brother"
+      }
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      advocate {
+        id
+      }
+      name
+      designation
+      phoneList
+      emailList
+      bloodGroup
+      education
+      address {
+        streetAddress,
+        postOffice {
+          id
+        }
+        subDistrict {
+          id
+        }
+        district {
+          id
+        }
+        country
+      },
+      description
+      emergencyContactPerson {
+        name
+        phoneList
+        emailList
+        relation
+      }
+      staffStatus
+      createdTime
+    }
+  }
+}
+
+mutation {
+  updateStaff(
+    staff: {
+      id: "60a7465222ef6b2eba44e0fe"
+      name: "Test Staff",
+      designation: "Test Designation",
+      phoneList: ["01849764118"}],
+      emailList: ["test@gmail.com"],
+      bloodGroup: A_POSITIVE,
+      education: "Test Education",
+      address: {
+        streetAddress: "Test Street Address",
+        postOffice: {
+          id: "6097007722ef6b8c89ee37df"
+        }
+        subDistrict: {
+          id: "6096f47f22ef6b7a821c1d49"
+        }
+        district: {
+          id: "6096e82a22ef6b6f11e9c0e6"
+        }
+        country: "Bangladesh"
+      },
+      description: "This is a test staff",
+      emergencyContactPerson: {
+        name: "Test",
+        phoneList: ["01997157536"],
+        emailList: ["test1@gmail.com"],
+        relation: "Brother"
+      }
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      advocate {
+        id
+        name
+        phone
+        email
+        designation
+        chamberName
+      }
+      name
+      designation
+      phoneList
+      emailList
+      bloodGroup
+      education
+      address {
+        streetAddress,
+        postOffice {
+          id
+          name
+          postCode
+        }
+        subDistrict {
+          id
+          name
+        }
+        district {
+          id
+          name
+        }
+        country
+      },
+      description
+      emergencyContactPerson {
+        name
+        phoneList
+        emailList
+        relation
+      }
+      staffStatus
+      createdTime
+    }
+  }
+}
+
+mutation {
+  updateStaffStatus(
+    staffId: "60a774d522ef6b73356e98c2",
+    staffStatus: ACTIVE
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      advocate {
+        id
+        name
+        phone
+        email
+        designation
+        chamberName
+      }
+      name
+      designation
+      phoneList
+      emailList
+      bloodGroup
+      education
+      address {
+        streetAddress,
+        postOffice {
+          id
+          name
+          postCode
+        }
+        subDistrict {
+          id
+          name
+        }
+        district {
+          id
+          name
+        }
+        country
+      },
+      description
+      emergencyContactPerson {
+        name
+        phoneList
+        emailList
+        relation
+      }
+      staffStatus
+      createdTime
+    }
+  }
+}
+
+mutation {
+  deleteStaff(
+    staffId: "60a7465222ef6b2eba44e0fe"
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+  }
+}
+
+{
+  getStaffList(size: 10, offset: 0) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      staffList {
+        id
+        advocate {
+          id
+          name
+          phone
+          email
+          designation
+          chamberName
+        }
+        name
+        designation
+        phoneList
+        emailList
+        bloodGroup
+        education
+        address {
+          streetAddress,
+          postOffice {
+            id
+            name
+            postCode
+          }
+          subDistrict {
+            id
+            name
+          }
+          district {
+            id
+            name
+          }
+          country
+        },
+        description
+        emergencyContactPerson {
+          name
+          phoneList
+          emailList
+          relation
+        }
+        staffStatus
+        createdTime
+      }
+      offset
+      limit
+      numberOfElements
+      totalElements
+      totalPages
+      first
+      last
+    }
+  }
+}
+
+{
+  getStaffById(staffId: "60a7465222ef6b2eba44e0fe") {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      advocate {
+        id
+        name
+        phone
+        email
+        designation
+        chamberName
+      }
+      name
+      designation
+      phoneList
+      emailList
+      bloodGroup
+      education
+      address {
+        streetAddress,
+        postOffice {
+          id
+          name
+          postCode
+        }
+        subDistrict {
+          id
+          name
+        }
+        district {
+          id
+          name
+        }
+        country
+      },
+      description
+      emergencyContactPerson {
+        name
+        phoneList
+        emailList
+        relation
+      }
+      staffStatus
+      createdTime
+    }
+  }
+}
+
+Client Type:
+mutation {
+  createClientType(
+    clientType: {
+      name: "Test Client Type",
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+    }
+  }
+}
+
+mutation {
+  updateClientType(
+    clientType: {
+      id: "60a7679a22ef6b5d24c1ddf9",
+      name: "Test Test Client Type",
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+    }
+  }
+}
+
+mutation {
+  deleteClientType(
+    clientTypeId: "60a7679a22ef6b5d24c1ddf9"
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+  }
+}
+
+{
+  getClientTypeList(size: 10, offset: 0) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      clientTypeList {
+        id
+        name
+      }
+      offset
+      limit
+      numberOfElements
+      totalElements
+      totalPages
+      first
+      last
+    }
+  }
+}
+
+{
+  getClientTypeById(clientTypeId: "60a7683f22ef6b5d24c1ddfd") {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+    }
+  }
+}
+
+{
+  getClientTypeByClientTypeName(clientTypeName: "Test Client Type") {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+    }
+  }
+}
+
+mutation {
+  login(
+    username: "shihabhossain.works@gmail.com",
+    password: "Abc123",
+    rememberMe: true
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data
+  }
+}
+
+Client:
+mutation {
+  createClient(
+    client: {
+      name: "Test Client",
+      phoneList: ["01849764118"],
+      emailList: ["test@gmail.com"],
+      address: {
+        streetAddress: "Test Street Adress",
+        postOffice: {
+          id: "6097007722ef6b8c89ee37df"
+        }
+        subDistrict: {
+          id: "6096f47f22ef6b7a821c1d49"
+        }
+        district: {
+          id: "6096e82a22ef6b6f11e9c0e6"
+        }
+        country: "Bangladesh"
+      },
+      contactPersonList: [{
+        name: "Test",
+        phoneList: ["01997157536"],
+        emailList: ["test1@gmail.com"],
+        company: "Test Company",
+        designation: "Designation",
+        description: "Test Description"
+      }]
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      advocate {
+        id
+      }
+      name
+      phoneList
+      emailList
+      address {
+        streetAddress,
+        postOffice {
+          id
+        }
+        subDistrict {
+          id
+        }
+        district {
+          id
+        }
+        country
+      },
+      contactPersonList {
+        name
+        phoneList
+        emailList
+        company
+        designation
+        description
+      }
+    }
+  }
+}
+
+mutation {
+  updateClient(
+    client: {
+      id: "60a7a0ea22ef6baaa68b8071",
+      name: "Test Client",
+      phoneList: ["01849764118"],
+      emailList: ["test@gmail.com"],
+      address: {
+        streetAddress: "Test Street Adress",
+        postOffice: {
+          id: "6097007722ef6b8c89ee37df"
+        }
+        subDistrict: {
+          id: "6096f47f22ef6b7a821c1d49"
+        }
+        district: {
+          id: "6096e82a22ef6b6f11e9c0e6"
+        }
+        country: "Bangladesh"
+      },
+      contactPersonList: [{
+        name: "Test",
+        phoneList: ["01997157536"],
+        emailList: ["test1@gmail.com"],
+        company: "Test Company",
+        designation: "Designation",
+        description: "Test Description"
+      }]
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      advocate {
+        id
+      }
+      name
+      phoneList
+      emailList
+      address {
+        streetAddress,
+        postOffice {
+          id
+        }
+        subDistrict {
+          id
+        }
+        district {
+          id
+        }
+        country
+      },
+      contactPersonList {
+        name
+        phoneList
+        emailList
+        company
+        designation
+        description
+      }
+    }
+  }
+}
+
+mutation {
+  deleteClient(
+    clientId: "60a7a0ea22ef6baaa68b8071"
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+  }
+}
+
+{
+  getClientList(size: 10, offset: 0) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      clientList {
+        id
+        advocate {
+          id
+          name
+          phone
+          email
+          designation
+          chamberName
+        }
+        name
+        phoneList
+        emailList
+        address {
+          streetAddress,
+          postOffice {
+            id
+          }
+          subDistrict {
+            id
+          }
+          district {
+            id
+          }
+          country
+        },
+        contactPersonList {
+          name
+          phoneList
+          emailList
+          company
+          designation
+          description
+        }
+      }
+      offset
+      limit
+      numberOfElements
+      totalElements
+      totalPages
+      first
+      last
+    }
+  }
+}
+
+{
+  getClientById(clientId: "60a7a0ea22ef6baaa68b8071") {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      advocate {
+        id
+        name
+        phone
+        email
+        designation
+        chamberName
+      }
+      name
+      phoneList
+      emailList
+      address {
+        streetAddress,
+        postOffice {
+          id
+        }
+        subDistrict {
+          id
+        }
+        district {
+          id
+        }
+        country
+      },
+      contactPersonList {
+        name
+        phoneList
+        emailList
+        company
+        designation
+        description
+      }
+    }
+  }
+}
+
+Admin:
+mutation {
+  createAdmin(
+    admin: {
+      name: "Shihab Hossain",
+      phone: "01997157535",
+      email: "shihabhossain611@gmail.com",
+      password: "Abc123",
+      designation: "Software Engineer",
+      adminType: SUPER_ADMIN
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      phone
+      email
+      designation
+      adminType
+      adminStatus
+    }
+  }
+}
+
+mutation {
+  updateAdmin(
+    admin: {
+      id: "60a3ac4a22ef6bdd6356ff8a",
+      name: "Shihab Hossain",
+      phone: "01997157535",
+      email: "shihabhossain611@gmail.com",
+      designation: "Software Engineer",
+      adminType: SUPER_ADMIN
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      phone
+      email
+      designation
+      adminType
+      adminStatus
+    }
+  }
+}
+
+mutation {
+  updateAdminStatus(
+    admin: {
+      id: "60a3ac4a22ef6bdd6356ff8a",
+      adminStatus: ACTIVE
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      phone
+      email
+      designation
+      adminType
+      adminStatus
+    }
+  }
+}
+
+{
+  getAdminByUsername(username: "01997157535") {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      phone
+      email
+      designation
+      adminType
+      adminStatus
+    }
+  }
+}
+
+{
+  getAdminList(size: 10, offset: 0) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      adminList {
+        id
+        name
+        phone
+        email
+        designation
+        adminType
+        adminStatus
+      }
+      offset
+      limit
+      numberOfElements
+      totalElements
+      totalPages
+      first
+      last
+    }
+  }
+}
+
+{
+  getAdminById(adminId: "60a3ac4a22ef6bdd6356ff8a") {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      phone
+      email
+      designation
+      adminType
+      adminStatus
+    }
+  }
+}
+
+Advocate:
+mutation {
+  createAdvocate(
+    advocate: {
+      name: "Shihab Hossain",
+      phone: "01302950013",
+      email: "shihabhossain.works@gmail.com",
+      password: "Abc123",
+      designation: LAWYER,
+      bloodGroup: A_POSITIVE
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      phone
+      email
+      designation
+      chamberName
+      address {
+        streetAddress
+        postOffice {
+          id
+        }
+        subDistrict {
+          id
+        }
+        district {
+          id
+        }
+        country
+      }
+      bloodGroup
+      picture
+      phoneVerified
+      phoneVerifiedTime
+      emailVerified
+      emailVerifiedTime
+      phoneList {
+        number
+        verified
+        verifiedOn
+      }
+      emailList {
+        address
+        verified
+        verifiedOn
+      }
+      fax
+      website
+      membershipList {
+        barCouncil {
+          id
+          name
+        }
+        memberId
+      }
+      serviceAreaList {
+        id
+        name
+      }
+      specialitiesList {
+        id
+        name
+      }
+      affiliationsList {
+        id
+        name
+      }
+      branchList
+      legalAidServices
+      proBonoServices
+      pushNotification
+      sendAutoSmsToClient
+      sendAutoEmailToClient
+      newsletterSubscription
+    }
+  }
+}
+
+mutation {
+  updateAdvocateContactAndOthersInformation(
+    advocate: {
+      picture: "fjdlskfdjslfkj",
+      phone: "01997157535",
+      fax: "fsdlkfjdslfk",
+      website: "fjldkfjdlsk",
+      address: {
+        streetAddress: "Test Street Adress",
+        postOffice: {
+          id: "6097007722ef6b8c89ee37df"
+        }
+        subDistrict: {
+          id: "6096f47f22ef6b7a821c1d49"
+        }
+        district: {
+          id: "6096e82a22ef6b6f11e9c0e6"
+        }
+        country: "Bangladesh"
+      },
+      designation: "ADVOCATE",
+      chamberName: "Test Chamber",
+      membershipList: [
+        {
+          barCouncil: {
+            id: "6097ba0622ef6b8bb91b3a6a"
+          }
+          memberId: "121"
+        }
+      ],
+      serviceAreaList: [
+        {
+          id: "6097cd8222ef6ba0d69c40d4"
+        }
+      ],
+      specialitiesList: [
+        {
+          id: "609a4d5622ef6b5eac61aa63"
+        }
+      ],
+      affiliationsList: [
+        {
+          id: "609a556822ef6b8d0943f936"
+        }
+      ],
+      branchList: ["fdlskfslkf"],
+      legalAidServices: true,
+      proBonoServices: true
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      phone
+      email
+      designation
+      chamberName
+      address {
+        streetAddress
+        postOffice {
+          id
+        }
+        subDistrict {
+          id
+        }
+        district {
+          id
+        }
+        country
+      }
+      bloodGroup
+      picture
+      phoneVerified
+      phoneVerifiedTime
+      emailVerified
+      emailVerifiedTime
+      phoneList {
+        number
+        verified
+        verifiedOn
+      }
+      emailList {
+        address
+        verified
+        verifiedOn
+      }
+      fax
+      website
+      membershipList {
+        barCouncil {
+          id
+          name
+        }
+        memberId
+      }
+      serviceAreaList {
+        id
+        name
+      }
+      specialitiesList {
+        id
+        name
+      }
+      affiliationsList {
+        id
+        name
+      }
+      branchList
+      legalAidServices
+      proBonoServices
+      pushNotification
+      sendAutoSmsToClient
+      sendAutoEmailToClient
+      newsletterSubscription
+    }
+  }
+}
+
+mutation {
+  updateAdvocateBasicInformation(
+    advocate: {
+      name: "Asif Hossain",
+      phone: "01997157535",
+      email: "asif@gmail.com",
+      designation: "ADVOCATE",
+      chamberName: "Test Chamber",
+      bloodGroup: "A_POSITIVE",
+      picture: "fjsdklfjdlskfj"
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      phone
+      email
+      designation
+      chamberName
+      bloodGroup
+      picture
+    }
+  }
+}
+
+mutation {
+  verifyAdvocateAccount(
+    advocateId: "60b6023a22ef6b99aaefc1af",
+    code: "507354"
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      phone
+      email
+      designation
+      chamberName
+      address {
+        streetAddress
+        postOffice {
+          id
+        }
+        subDistrict {
+          id
+        }
+        district {
+          id
+        }
+        country
+      }
+      bloodGroup
+      picture
+      phoneVerified
+      phoneVerifiedTime
+      emailVerified
+      emailVerifiedTime
+      phoneList {
+        number
+        verified
+        verifiedOn
+      }
+      emailList {
+        address
+        verified
+        verifiedOn
+      }
+      fax
+      website
+      membershipList {
+        barCouncil {
+          id
+          name
+        }
+        memberId
+      }
+      serviceAreaList {
+        id
+        name
+      }
+      specialitiesList {
+        id
+        name
+      }
+      affiliationsList {
+        id
+        name
+      }
+      branchList
+      legalAidServices
+      proBonoServices
+      pushNotification
+      sendAutoSmsToClient
+      sendAutoEmailToClient
+      newsletterSubscription
+    }
+  }
+}
+
+{
+  getAdvocateList(size: 10, offset: 0) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      advocateList {
+        id
+        name
+        phone
+        email
+        designation
+        chamberName
+        address {
+          streetAddress
+          postOffice {
+            id
+          }
+          subDistrict {
+            id
+          }
+          district {
+            id
+          }
+          country
+        }
+        bloodGroup
+        picture
+        phoneVerified
+        phoneVerifiedTime
+        emailVerified
+        emailVerifiedTime
+        phoneList {
+          number
+          verified
+          verifiedOn
+        }
+        emailList {
+          address
+          verified
+          verifiedOn
+        }
+        fax
+        website
+        membershipList {
+          barCouncil {
+            id
+            name
+          }
+          memberId
+        }
+        serviceAreaList {
+          id
+          name
+        }
+        specialitiesList {
+          id
+          name
+        }
+        affiliationsList {
+          id
+          name
+        }
+        branchList
+        legalAidServices
+        proBonoServices
+        pushNotification
+        sendAutoSmsToClient
+        sendAutoEmailToClient
+        newsletterSubscription
+      }
+      offset
+      limit
+      numberOfElements
+      totalElements
+      totalPages
+      first
+      last
+    }
+  }
+}
+
+{
+  getAdvocateById(advocateId: "60a4f9c122ef6b91b56c9f67") {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      phone
+      email
+      designation
+      chamberName
+      address {
+        streetAddress
+        postOffice {
+          id
+        }
+        subDistrict {
+          id
+        }
+        district {
+          id
+        }
+        country
+      }
+      bloodGroup
+      picture
+      phoneVerified
+      phoneVerifiedTime
+      emailVerified
+      emailVerifiedTime
+      phoneList {
+        number
+        verified
+        verifiedOn
+      }
+      emailList {
+        address
+        verified
+        verifiedOn
+      }
+      fax
+      website
+      membershipList {
+        barCouncil {
+          id
+          name
+        }
+        memberId
+      }
+      serviceAreaList {
+        id
+        name
+      }
+      specialitiesList {
+        id
+        name
+      }
+      affiliationsList {
+        id
+        name
+      }
+      branchList
+      legalAidServices
+      proBonoServices
+      pushNotification
+      sendAutoSmsToClient
+      sendAutoEmailToClient
+      newsletterSubscription
+    }
+  }
+}
+
+mutation {
+  updateAdvocateBasicInformation(
+    advocate: {
+      id: "60a4f9c122ef6b91b56c9f67",
+      name: "Shihab Hossain",
+      phone: "01997157535",
+      email: "shihabhossain611@gmail.com",
+      designation: "Software Engineer",
+      adminType: SUPER_ADMIN
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      phone
+      email
+      designation
+      adminType
+      adminStatus
+    }
+  }
+}
+
+{
+  getAdvocateByUsername(username: "01302950013") {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      phone
+      email
+      designation
+      chamberName
+      address {
+        streetAddress
+        postOffice {
+          id
+        }
+        subDistrict {
+          id
+        }
+        district {
+          id
+        }
+        country
+      }
+      bloodGroup
+      picture
+      phoneVerified
+      phoneVerifiedTime
+      emailVerified
+      emailVerifiedTime
+      phoneList {
+        number
+        verified
+        verifiedOn
+      }
+      emailList {
+        address
+        verified
+        verifiedOn
+      }
+      fax
+      website
+      membershipList {
+        barCouncil {
+          id
+          name
+        }
+        memberId
+      }
+      serviceAreaList {
+        id
+        name
+      }
+      specialitiesList {
+        id
+        name
+      }
+      affiliationsList {
+        id
+        name
+      }
+      branchList
+      legalAidServices
+      proBonoServices
+      pushNotification
+      sendAutoSmsToClient
+      sendAutoEmailToClient
+      newsletterSubscription
+    }
+  }
+}
+
+mutation {
+  updateAdvocatePassword(
+    passwordResetFormData: {
+      oldPassword: "Abc124"
+      newPassword: "Abc123"
+      reWrittenPassword: "Abc123"
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      phone
+      email
+      designation
+      chamberName
+      address {
+        streetAddress
+        postOffice {
+          id
+        }
+        subDistrict {
+          id
+        }
+        district {
+          id
+        }
+        country
+      }
+      bloodGroup
+      picture
+      phoneVerified
+      phoneVerifiedTime
+      emailVerified
+      emailVerifiedTime
+      phoneList {
+        number
+        verified
+        verifiedOn
+      }
+      emailList {
+        address
+        verified
+        verifiedOn
+      }
+      fax
+      website
+      membershipList {
+        barCouncil {
+          id
+          name
+        }
+        memberId
+      }
+      serviceAreaList {
+        id
+        name
+      }
+      specialitiesList {
+        id
+        name
+      }
+      affiliationsList {
+        id
+        name
+      }
+      branchList
+      legalAidServices
+      proBonoServices
+      pushNotification
+      sendAutoSmsToClient
+      sendAutoEmailToClient
+      newsletterSubscription
+    }
+  }
+}
+
+Associate:
+mutation {
+  createAssociate(
+    associate: {
+      name: "Test Associate",
+      phone: "01997157535",
+      email: "shihabhossain611@gmail.com",
+      password: "Abc123",
+      designation: ADVOCATE
+      emergencyContactPerson: {
+        name: "Test",
+        phoneList: ["01997157536"],
+        emailList: ["test1@gmail.com"],
+        relation: "Brother"
+      }
+      address: {
+        streetAddress: "Test Street Adress",
+        postOffice: {
+          id: "6097007722ef6b8c89ee37df"
+        }
+        subDistrict: {
+          id: "6096f47f22ef6b7a821c1d49"
+        }
+        district: {
+          id: "6096e82a22ef6b6f11e9c0e6"
+        }
+        country: "Bangladesh"
+      },
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      phone
+      email
+      designation
+      address {
+        streetAddress,
+        postOffice {
+          id
+          name
+          postCode
+        }
+        subDistrict {
+          id
+          name
+        }
+        district {
+          id
+          name
+        }
+        country
+      },
+      emergencyContactPerson {
+        name
+        phoneList
+        emailList
+        relation
+      }
+    }
+  }
+}
+
+mutation {
+  updateAssociateBasicInformation(
+    associate: {
+      id: "60ab8e1f22ef6b3de54e5dfe",
+      name: "Test Test Associate",
+      phone: "01997157535",
+      email: "shihabhossain611@gmail.com",
+      password: "Abc123",
+      designation: ADVOCATE
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      phone
+      email
+      designation
+    }
+  }
+}
+
+mutation {
+  deleteAssociate(
+    associateId: "60a3681522ef6b7e49ba843f"
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+  }
+}
+
+{
+  getAssociateList(size: 10, offset: 0) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      associateList {
+        id
+        name
+        phone
+        email
+        designation
+      }
+      offset
+      limit
+      numberOfElements
+      totalElements
+      totalPages
+      first
+      last
+    }
+  }
+}
+
+{
+  getAssociateById(associateId: "60ab8e1f22ef6b3de54e5dfe") {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      phone
+      email
+      designation
+    }
+  }
+}
+
+{
+  getAssociateByUsername(username: "01997157535") {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      name
+      phone
+      email
+      designation
+    }
+  }
+}
+
+Case:
+mutation {
+  createCase(
+    case: {
+      district: {
+        id: "60a79204ea41b9184122646b"
+      }
+      caseType: {
+        id: "60a8aff8ea41b92c4b6c119a"
+      }
+      caseNumber: "1",
+      year: 2020,
+      primaryResult:{
+        id: "609ae0a822ef6b678d4af567"
+      }
+      primaryResultDate: "2020-05-30",
+      reminderForExtension: 70,
+      caseCategory: {
+        id: "60a219f722ef6b4e367d1378"
+      },
+      courtName: {
+        id: "60ad0c3622ef6bd55c6cbe0f"
+      },
+      filingDate: "2020-05-25",
+      judgementDate: "2020-06-25",
+      judgementResult: {
+        id: "609ae8e622ef6b77831ae22b"
+      }
+      bellOnStayFor: 30000
+      wakalatnamaList: [
+        {
+          number: "1",
+          entryDate: "2020-06-25"
+        }
+      ],
+      judgeNameList: ["Sadek Bacchu"],
+      actList: ["Test Applicable"],
+      transferredCourtName: "Agortala",
+      arisingOutOfList: ["Test airising"],
+      witnessList: ["Test Witness"],
+      description: "Test description",
+      newCaseNumber: ["111"]
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      district {
+        id
+      }
+      caseType {
+        id
+      }
+      caseNumber
+      year
+      primaryResult {
+        id
+      }
+      primaryResultDate
+      reminderForExtension
+      caseCategory {
+        id
+      }
+      courtName {
+        id
+      }
+      filingDate
+      judgementDate
+      judgementResult {
+        id
+      }
+      bellOnStayFor
+      wakalatnamaList {
+          number
+          entryDate
+      },
+      judgeNameList
+      actList
+      transferredCourtName
+      arisingOutOfList
+      witnessList
+      description
+      newCaseNumber
+    }
+  }
+}
+
+mutation {
+  updateCaseBasicInformation(
+    case: {
+      id: "60b8ac74ea41b93a738118d7",
+      district: {
+        id: "1"
+      }
+      caseType: {
+        id: "60a8aff8ea41b92c4b6c119a"
+      }
+      caseNumber: "1",
+      year: 2020,
+      primaryResult:{
+        id: "609ae0a822ef6b678d4af567"
+      }
+      primaryResultDate: "2020-05-30",
+      reminderForExtension: 70,
+      caseCategory: {
+        id: "60a219f722ef6b4e367d1378"
+      },
+      courtName: {
+        id: "60ad0c3622ef6bd55c6cbe0f"
+      },
+      filingDate: "2020-05-25",
+      judgementDate: "2020-06-25",
+      judgementResult: {
+        id: "609ae8e622ef6b77831ae22b"
+      }
+      bellOnStayFor: 30000
+      wakalatnamaList: [
+        {
+          number: "1",
+          entryDate: "2020-06-25"
+        }
+      ],
+      judgeNameList: ["Sadek Bacchu"],
+      actList: ["Test Applicable"],
+      arisingOutOfList: ["Test airising"],
+      witnessList: ["Test Witness"],
+      description: "Test description"
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      district {
+        id
+      }
+      caseType {
+        id
+      }
+      caseNumber
+      year
+      primaryResult {
+        id
+      }
+      primaryResultDate
+      reminderForExtension
+      caseCategory {
+        id
+      }
+      courtName {
+        id
+      }
+      filingDate
+      judgementDate
+      judgementResult {
+        id
+      }
+      bellOnStayFor
+      wakalatnamaList {
+          number
+          entryDate
+      },
+      judgeNameList
+      actList
+      arisingOutOfList
+      witnessList
+      description
+    }
+  }
+}
+
+mutation {
+  updateCaseDisposedStatus(
+    caseId: "60b8ac74ea41b93a738118d7"
+    disposed: false
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      disposed
+      caseStatus
+    }
+  }
+}
+
+mutation {
+  updateCaseNoNextDateStatus(
+    caseId: "60b8ac74ea41b93a738118d7"
+    noNextDate: false
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      disposed
+      noNextDate
+      caseStatus
+    }
+  }
+}
+
+mutation {
+  updateCaseFee(
+    caseId: "60b8ac74ea41b93a738118d7"
+    caseFee: {
+      date: "2021-06-05T17:09:42.411",
+      fee: 1500.00,
+      cost: 500.00
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      caseUpdates {
+        courtName {
+          id
+        }
+        nextDate
+        nextStep
+        description
+        orderDate
+        caseStatus
+      }
+      caseFeeList {
+        date
+        fee
+        cost
+      }
+      disposed
+      noNextDate
+      caseStatus
+    }
+  }
+}
+
+mutation {
+  updateCaseScheduleInformation(
+    caseId: "60b8ac74ea41b93a738118d7"
+    caseUpdate: {
+      courtName: {
+        id: "609aef1422ef6b803ef05584"
+      }
+      nextDate: "2021-06-07T17:09:42.411",
+      nextStep: "Test Step",
+      description: "Test Description",
+      orderDate: "2021-06-07",
+      caseStatus: "ACTIVE"
+
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      caseUpdates {
+        courtName {
+          id
+        }
+        nextDate
+        nextStep
+        description
+        orderDate
+        caseStatus
+      }
+      disposed
+      noNextDate
+      caseStatus
+    }
+  }
+}
+
+mutation {
+  updateCaseClientAndOpponentInformation(
+    case: {
+      id: "60ad18ff22ef6bf1bb39496f"
+      clientBehalf: {
+        id: "60a25d4422ef6bbdc71f83f1"
+      }
+      clientType: {
+        id: "60a7683f22ef6b5d24c1ddfd"
+      }
+      client:[{
+        id: "60ad19da22ef6bf1bb394971"
+      }]
+      assignTo: {
+        id: "60ab8e1f22ef6b3de54e5dfe"
+      }
+      reference: ["Test Reference"],
+      fileNumber: "1123"
+      opponentList: [{
+        name: "Jacky Chan",
+        phoneList: ["01997157536"]
+      }]
+      opponentAdvocate: [{
+        name: "Gabbar Sing"
+      }],
+      opponentWitnessList: ["Rahima", "Rahim Box"]
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      clientBehalf {
+        id
+      }
+      clientType {
+        id
+      }
+      client {
+        id
+      }
+      assignTo {
+        id
+      }
+      reference
+      fileNumber
+      opponentList {
+        name
+        phoneList
+      }
+      opponentAdvocate {
+        name
+      }
+      opponentWitnessList
+    }
+  }
+}
+
+mutation {
+  updateAdditionalInformation(
+    case: {
+      id: "60ad18ff22ef6bf1bb39496f"
+      policeStation: {
+        id: "60a80d10ea41b9184122647b"
+      }
+      fir: ["Test fir"]
+      investigationOfficerList:[{
+        name: "Abdul Kuddus",
+        phoneList: ["01997157538"]
+      }]
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      policeStation {
+        id
+      }
+      fir
+      investigationOfficerList  {
+        name
+        phoneList
+      }
+    }
+  }
+}
+
+mutation{
+  deleteCase(caseId: "60b8abb0ea41b93a738118d3") {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+  }
+}
+
+{
+  getCaseList(size: 10, offset: 0) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      caseList {
+        id
+        district {
+          id
+          name
+        }
+        caseType {
+          id
+          name
+        }
+        caseNumber
+        year
+        primaryResult {
+          id
+          name
+        }
+        primaryResultDate
+        reminderForExtension
+        caseCategory {
+          id
+          name
+        }
+        courtName {
+          id
+          name
+        }
+        filingDate
+        judgementDate
+        judgementResult {
+          id
+          name
+        }
+        bellOnStayFor
+        wakalatnamaList {
+            number
+            entryDate
+        },
+        judgeNameList
+        actList
+        transferredCourtName
+        arisingOutOfList
+        witnessList
+        description
+        newCaseNumber
+      }
+      offset
+      limit
+      numberOfElements
+      totalElements
+      totalPages
+      first
+      last
+    }
+  }
+}
+
+{
+  getCaseById(caseId: "60ad18ff22ef6bf1bb39496f") {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      district {
+        id
+        name
+      }
+      caseType {
+        id
+        name
+      }
+      caseNumber
+      year
+      primaryResult {
+        id
+        name
+      }
+      primaryResultDate
+      reminderForExtension
+      caseCategory {
+        id
+        name
+      }
+      courtName {
+        id
+        name
+      }
+      filingDate
+      judgementDate
+      judgementResult {
+        id
+        name
+      }
+      bellOnStayFor
+      wakalatnamaList {
+          number
+          entryDate
+      },
+      judgeNameList
+      actList
+      transferredCourtName
+      arisingOutOfList
+      witnessList
+      description
+      newCaseNumber
+    }
+  }
+}
+
+Summary:
+{
+  getAdminDashboardSummary {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      totalSale
+      totalIncome
+      totalUser
+      todayNewUserCount
+      improvementRate
+      admin {
+        id
+        name
+        phone
+        email
+        designation
+        adminType
+        adminStatus
+      }
+    }
+  }
+}
+
+{
+  getAdvocateDashboardSummary {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      todayCaseCount
+      yesterdayCaseCount
+      thisMonthCaseCount
+      totalCaseCount
+      totalClient
+      totalAssociate
+      totalStaffs
+      activeToDoList {
+        id
+        description
+        phone
+        createdTime
+        completed
+        completedTime
+      }
+      latestAdvocatePlan {
+        id
+        pricingPlan {
+          id
+          name
+          planMode
+          featureList
+          benefitList
+          price
+          discountedAmount
+          inactive
+        }
+        payMode
+        activationTime
+        expiryTime
+      }
+      latestPlanRemainingDays
+      advocate {
+        id
+        name
+        phone
+        email
+        designation
+        chamberName
+        address {
+          streetAddress
+          postOffice {
+            id
+          }
+          subDistrict {
+            id
+          }
+          district {
+            id
+          }
+          country
+        }
+        bloodGroup
+        picture
+        phoneVerified
+        phoneVerifiedTime
+        emailVerified
+        emailVerifiedTime
+        phoneList {
+          number
+          verified
+          verifiedOn
+        }
+        emailList {
+          address
+          verified
+          verifiedOn
+        }
+        fax
+        website
+        membershipList {
+          barCouncil {
+            id
+            name
+          }
+          memberId
+        }
+        serviceAreaList {
+          id
+          name
+        }
+        specialitiesList {
+          id
+          name
+        }
+        affiliationsList {
+          id
+          name
+        }
+        branchList
+        legalAidServices
+        proBonoServices
+        pushNotification
+        sendAutoSmsToClient
+        sendAutoEmailToClient
+        newsletterSubscription
+      }
+    }
+  }
+}
+
+Advocate Plan:
+mutation {
+  createAdvocatePlanAsAnAdmin(
+    advocatePlan: {
+      advocate: {
+        name: "Shihab Hossain",
+        chamberName: "Lawyer Chamber"
+        phone: "01822249733",
+        email: "shihabhossain128@gmail.com",
+        password: "Abc123",
+        address: {
+          streetAddress: "Test Street Adress",
+          subDistrict: {
+            id: "6096f47f22ef6b7a821c1d49"
+          }
+          district: {
+            id: "6096e82a22ef6b6f11e9c0e6"
+          }
+          country: "Bangladesh"
+        }
+      }
+      pricingPlan: {
+        id: "609ac94f22ef6b43589d5434"
+      }
+      payMode: BANK
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      advocate {
+        id
+        name
+        phone
+        email
+        chamberName
+        address {
+          streetAddress
+          subDistrict {
+            id
+          }
+          district {
+            id
+          }
+          country
+        }
+      }
+      pricingPlan {
+        id
+      }
+      payMode
+    }
+  }
+}
+
+{
+  getAdvocatePlanList(size: 10, offset: 0) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      advocatePlanList {
+        id
+        advocate {
+          id
+          name
+          phone
+          email
+          chamberName
+          address {
+            streetAddress
+            subDistrict {
+              id
+            }
+            district {
+              id
+            }
+            country
+          }
+        }
+        pricingPlan {
+          id
+          name
+          planMode
+          featureList
+          benefitList
+          price
+          discountedAmount
+          inactive
+        }
+        payMode
+        activationTime
+        expiryTime
+      }
+      offset
+      limit
+      numberOfElements
+      totalElements
+      totalPages
+      first
+      last
+    }
+  }
+}
+
+{
+  getAdvocatePlanById(advocatePlanId: "60b47dabea41b9677c391434") {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+        advocate {
+          id
+          name
+          phone
+          email
+          chamberName
+          address {
+            streetAddress
+            subDistrict {
+              id
+            }
+            district {
+              id
+            }
+            country
+          }
+        }
+        pricingPlan {
+          id
+          name
+          planMode
+          featureList
+          benefitList
+          price
+          discountedAmount
+          inactive
+        }
+        payMode
+    }
+  }
+}
+
+Expense:
+mutation {
+  createExpense(
+    expense: {
+      dateTime: "2020-06-25T17:09:42.411"
+      head: "Test Head"
+      amount: 2000.0
+      details: "Test Details"
+      paymentDetails: {
+        payMode: "BANK"
+        note: "This is a test note"
+        bankPayment: {
+          name: "Dhaka Bank Ltd."
+          branch: "Mirput"
+          accountNumber: "112423232333"
+          depositSlipNumber: "12324334445"
+        }
+      }
+    }
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      id
+      advocate {
+        id
+      }
+      invoiceId
+      dateTime
+      head
+      amount
+      details
+      paymentDetails {
+        payMode
+        note
+        bankPayment {
+          name
+          branch
+          accountNumber
+          depositSlipNumber
+        }
+      }
+    }
+  }
+}
+
+mutation {
+  deleteExpense(
+    expenseId: "60b4db88fa704364b1212de9"
+  ) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+  }
+}
+
+{
+  getExpenseList(size: 10, offset: 0) {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+      expenseList {
+        id
+        advocate {
+            id
+        }
+        invoiceId
+        dateTime
+        head
+        amount
+        details
+        paymentDetails {
+            payMode
+            note
+            bankPayment {
+              name
+              branch
+              accountNumber
+              depositSlipNumber
+            }
+        }
+      }
+      offset
+      limit
+      numberOfElements
+      totalElements
+      totalPages
+      first
+      last
+    }
+  }
+}
+
+{
+  getExpenseById(expenseId: "60b4db88fa704364b1212de9") {
+    status
+    code
+    errors {
+      code
+      field
+      message
+      description
+    }
+    data {
+        id
+        advocate {
+          id
+        }
+        invoiceId
+        dateTime
+        head
+        amount
+        details
+        paymentDetails {
+          payMode
+          note
+          bankPayment {
+            name
+            branch
+            accountNumber
+            depositSlipNumber
+          }
+        }
+    }
+  }
+}

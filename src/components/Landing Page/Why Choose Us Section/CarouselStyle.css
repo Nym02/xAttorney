@@ -1,0 +1,241 @@
+.owl-theme .owl-nav {
+  z-index: 99999999;
+  width: 100%;
+  font-size: 46px;
+  height: auto !important;
+}
+.owl-nav button.owl-prev {
+  left: 0px;
+  position: absolute;
+  margin-top: -50px !important;
+  width: 50px !important;
+  height: 50px !important;
+  border: 1px solid #c8ac48 !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  outline: none !important;
+  color: #202838 !important;
+}
+.owl-nav button.owl-next {
+  right: 0px;
+  position: absolute;
+  margin-top: -50px !important;
+  width: 50px !important;
+  height: 50px !important;
+  border: 1px solid #c8ac48 !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  outline: none !important;
+  color: #202838 !important;
+}
+
+.owl-theme .owl-nav [class*='owl-']:hover {
+  background: none;
+  color: #c8ac48;
+}
+
+.blog-bg {
+  background-image: linear-gradient(to right bottom, #313b4eab, #313b4eab),
+    url('../../../assets/images/high-court-blog.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.textfield__label {
+  color: #313c4e !important;
+}
+
+.input-field {
+  border: 1px solid #fff !important;
+  color: #fff !important;
+}
+
+.input-field:focus {
+  border: 0px solid #fff !important;
+}
+
+.MuiInputBase-input {
+  color: rgb(0, 0, 0) !important;
+}
+
+.MuiPaper-elevation4 {
+  background-color: #f2f2f2 !important;
+}
+
+.otpdiv div {
+  width: 100% !important;
+  justify-content: space-evenly !important;
+}
+
+.otpInput {
+  width: 90% !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.otpInput input {
+  margin: 10px !important;
+  width: 60px !important;
+  height: 60px !important;
+  background-color: #cccccc !important;
+  border-radius: 4px !important;
+  color: #202838 !important;
+  font-size: 20px !important;
+}
+
+@media only screen and (max-width: 694px) {
+  .otpInput input {
+    margin: 10px !important;
+    width: 30px !important;
+    height: 30px !important;
+    background-color: #cccccc !important;
+    border-radius: 4px !important;
+    color: #202838 !important;
+    font-size: 20px !important;
+  }
+}
+
+.MuiTab-textColorInherit {
+  font-weight: bold !important;
+  outline: none !important;
+  width: auto !important;
+}
+
+.MuiStepIcon-root.MuiStepIcon-active {
+  color: #c8ac48 !important;
+}
+
+.MuiStepIcon-root.MuiStepIcon-completed {
+  color: #c8ac48 !important;
+}
+
+.MuiStepLabel-label {
+  color: #20283881 !important;
+  font-size: 12.8px !important;
+  font-weight: bold !important;
+}
+
+.MuiStepLabel-label.MuiStepLabel-active {
+  color: #202838 !important;
+  font-size: 12.8px !important;
+  font-weight: bold !important;
+}
+.MuiStepLabel-label.MuiStepLabel-completed {
+  color: #202838 !important;
+  font-size: 12.8px !important;
+  font-weight: bold !important;
+}
+
+.MuiStepConnector-lineHorizontal {
+  border: 2px solid #c8ac48 !important;
+}
+
+.MuiSelect-outlined.MuiSelect-outlined {
+  display: flex;
+}
+
+.MuiSelect-filled.MuiSelect-filled {
+  display: flex;
+}
+/* table header */
+
+.MUIDataTableToolbar-root-15 {
+  background: #313b4e !important;
+  border-top-left-radius: 10px !important;
+  border-top-right-radius: 10px !important;
+}
+
+.MuiTypography-h6 {
+  color: white !important;
+}
+.MUIDataTableToolbar-actions-19 .MuiSvgIcon-root {
+  color: white !important;
+}
+
+.css-nvf14r-ToastContainer {
+  z-index: 10000 !important;
+}
+
+.scrollbar {
+  overflow-y: scroll;
+}
+
+#main-scroll-Style::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  border-radius: 4px;
+}
+
+#main-scroll-Style::-webkit-scrollbar {
+  width: 6px;
+  background-color: transparent;
+}
+
+#main-scroll-Style::-webkit-scrollbar-thumb {
+  border-radius: 1px;
+  background-color: transparent;
+  background-image: -webkit-linear-gradient(top, #150a4796 0%, #1a0841 100%);
+}
+
+@media only screen and (min-width: 1536px) {
+  .whatPeopleSayBackground {
+    background-image: linear-gradient(
+      to right,
+      #ffffff,
+      #f5f5f6,
+      #ececec,
+      #e2e2e3,
+      #d8d9da
+    );
+    width: 78%;
+    height: 403px;
+    position: absolute;
+    z-index: -1;
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+  }
+}
+
+@media only screen and (min-width: 1560px) {
+  .whatPeopleSayBackground {
+    width: 74%;
+  }
+}
+
+@media only screen and (min-width: 1565px) {
+  .whatPeopleSayBackground {
+    width: 74%;
+  }
+}
+
+@media only screen and (min-width: 1694px) {
+  .whatPeopleSayBackground {
+    width: 74%;
+  }
+}
+
+.MuiFormLabel-root {
+  color: #202838 !important;
+}
+.MuiInputLabel-root {
+  color: #202838 !important;
+}
+.MuiInputLabel-formControl {
+  color: #202838 !important;
+}
+.MuiInputLabel-animated {
+  color: #202838 !important;
+}
+.MuiInputLabel-shrink {
+  color: #202838 !important;
+}
+.MuiInputLabel-filled {
+  color: #202838 !important;
+}
+.MuiFormLabel-filled {
+  color: #202838 !important;
+}
